@@ -24,19 +24,21 @@ int main()
 	else
 	cout << "插入失败" << endl;
 
-	if (InsertLinearList(mylist, 2, 2))
+	if (InsertLinearList(mylist, 2, 3))
 	{
 		cout << "插入成功" << endl;
 	}
 	else
 		cout << "插入失败" << endl;
 
-	if (InsertLinearList(mylist, 3, 2))
+	if (InsertLinearList(mylist, 3, 4))
 	{
 		cout << "插入成功" << endl;
 	}
 	else
 		cout << "插入失败" << endl;
+
+	Delete_X_LinearList(mylist, 3);
 
 	for (auto n:mylist->v)
 	{
