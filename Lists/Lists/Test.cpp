@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "List.h"
+#include <time.h>
 using namespace std;
 
 
@@ -8,42 +9,28 @@ using namespace std;
 
 int main()
 {
-	//线性表调试
-	LinearList* mylist = initLinearList();
+//线性表调试
+#pragma region ListTest
+		LinearList* mylist = initLinearList();
 	if (mylist)
 	{
-		cout << "线性表创建成功"<<endl;
+		cout << "线性表创建成功" << endl;
 	}
 	else cout << "线性表创建失败" << endl;
 
-	
-	if (InsertLinearList(mylist, 1, 2))
-	{
-		cout << "插入成功" << endl;
-	}
-	else
-	cout << "插入失败" << endl;
+	srand(static_cast<unsigned int>(time(nullptr))); 随机数种子
 
-	if (InsertLinearList(mylist, 2, 3))
-	{
-		cout << "插入成功" << endl;
-	}
-	else
-		cout << "插入失败" << endl;
+		for (int i = 0; i < 10; i++)
+		{
+			InsertLinearList(mylist, i + 1, rand() % 10);
+		}
 
-	if (InsertLinearList(mylist, 3, 4))
-	{
-		cout << "插入成功" << endl;
-	}
-	else
-		cout << "插入失败" << endl;
-
-	Delete_X_LinearList(mylist, 3);
-
-	for (auto n:mylist->v)
+	for (auto n : mylist->v)
 	{
 		cout << n << "   ";
 	}
+
+#pragma endregion
 
 	system("pause");
 

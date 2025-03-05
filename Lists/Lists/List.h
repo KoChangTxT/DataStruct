@@ -1,7 +1,7 @@
 #pragma once
-#include <iostream>
 #include <vector>
 using namespace std;
+
 
 /*
 		1.线性表  规定数据类型int类型
