@@ -1,4 +1,6 @@
 #pragma once
+#include <iostream>
+using namespace std;
 
 /*
 		1.链表  规定数据类型int类型
@@ -17,9 +19,9 @@
 typedef struct  LLNode  //节点结构(与头节点做区分)
 {
 	int val;			//节点值
-	LinkListNode* next;		//下一个节点
+	LLNode* next;		//下一个节点
 
-	LLNode(int num, LinkListNode* Node = nullptr) :val(num), next(Node) {};
+	LLNode(int num, LLNode* Node = nullptr) :val(num), next(Node) {};
 
 }LinkListNode;
 
@@ -33,4 +35,10 @@ typedef struct			//维护一个头节点
 LinkListHead* InitLinkList();
 
 //2.增：向线性表中第i(1≤i)个位置插入x - 用i来区分头插(1)和尾插(-1)
-void InsertLiniList(LinkListHead* Head, int x,int i);
+void InsertLinkList(LinkListHead* Head, int x,int i);
+
+//3.删：删除线性表中值为x的元素
+void Delete_X_LinkList(LinkListHead* Head, int x);
+
+//4.删：删除线性表中第i个位置的元素
+void Delete_I_LinkList(LinkListHead* Head, int i);
