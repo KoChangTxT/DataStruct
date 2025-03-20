@@ -15,28 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Test.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="List.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ChainList.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CycledLinkList.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="List.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ChainList.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="CycledLinkList.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

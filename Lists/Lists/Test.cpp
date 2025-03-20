@@ -2,6 +2,7 @@
 #include <vector>
 #include "List.h"
 #include"ChainList.h"
+#include "CycledLinkList.h"
 #include <time.h>
 using namespace std;
 
@@ -41,25 +42,32 @@ void LinkListTest()
 	InsertLinkList(pHead, 3, -1);
 	InsertLinkList(pHead, 4, -1);
 	InsertLinkList(pHead, 5, 2);
-	InsertLinkList(pHead, 8, 3);
-	Delete_X_LinkList(pHead, 8);
-	Delete_I_LinkList(pHead, 1);
+	InsertLinkList(pHead, 8, 3);	//2 5 8 3 4
+	//Delete_X_LinkList(pHead, 8);
+	//Delete_I_LinkList(pHead, 1);
+	//cout<<"下标为："<<Research_X_LinkList(pHead, 8)<<endl;
+	cout << "查找值为：" << Research_I_LinkList(pHead, 3) << endl;
 
 
-	LinkListNode* node = pHead->head;
-	while (node)
-	{
-		cout << node->val << " ";
-		node = node->next;
-	}
-	cout << endl;
-	cout << pHead->num << endl;
+	PrintList(pHead);
+}
+
+void CycledListTest()
+{
+	CycleLinkListHead* Head = initCycledLinkList();
+	InsertCycledList(Head, 2, 1);
+	InsertCycledList(Head, 3, 1);
+	InsertCycledList(Head, 4, -1);
+	InsertCycledList(Head, 5, -1);
+	InsertCycledList(Head, 6, 3);
+	printCycleList(Head);
+	
 }
 
 int main()
 {
 
-	LinkListTest();
+	CycledListTest();
 
 	system("pause");
 

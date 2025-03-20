@@ -13,6 +13,7 @@ using namespace std;
 			7.改：将链表中值为x的第一个元素的值改为y
 			8.打印：将链表中所有元素打印输出
 			9.快慢指针，用O(N)的时间复杂度找到链表的中间节点
+			10.清楚链表所有元素
 
 */
 
@@ -42,3 +43,21 @@ void Delete_X_LinkList(LinkListHead* Head, int x);
 
 //4.删：删除线性表中第i个位置的元素
 void Delete_I_LinkList(LinkListHead* Head, int i);
+
+//5.查：查找线性表中值为x的元素并返回下标值
+int Research_X_LinkList(LinkListHead* Head, int x);
+
+//6.查：查找线性表中第i个位置的元素并返回元素值
+int Research_I_LinkList(LinkListHead* Head, int i);
+
+//7.改：将链表中值为x的第一个元素的值改为y
+void Modify_X_LinkList(LinkListHead* Head, int x,int y);
+
+//8.打印：将链表中所有元素打印输出
+void PrintList(LinkListHead* Head);
+
+//9.快慢指针，用O(N)的时间复杂度找到链表的中间节点
+LinkListNode* FindMiddle(LinkListHead* Head);
+
+//10.清楚链表所有元素
+bool DeleteLinkList(LinkListHead* Head);

@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{39170476-A162-4FAA-A112-2F82D7FAC3F5}</ProjectGuid>
-    <RootNamespace>Lists</RootNamespace>
+    <ProjectGuid>{8AD48DE6-BD14-4CC9-919D-74B6F3C64160}</ProjectGuid>
+    <RootNamespace>PushBox</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,15 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ChainList.cpp" />
-    <ClCompile Include="CycledLinkList.cpp" />
-    <ClCompile Include="List.cpp" />
-    <ClCompile Include="Test.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ChainList.h" />
-    <ClInclude Include="CycledLinkList.h" />
-    <ClInclude Include="List.h" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

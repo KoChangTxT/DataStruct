@@ -121,3 +121,111 @@ void Delete_I_LinkList(LinkListHead* Head, int i)
 	return;
 
 }
+
+int Research_X_LinkList(LinkListHead* Head, int x)
+{
+	if (!Head || Head->num == 0) return 0;
+	
+	LinkListNode* cur = Head->head;
+
+	int i = 1;
+	while (cur && cur->val != x)
+	{
+		cur = cur->next;
+		i++;
+	}
+
+	if (!cur)
+	{
+		return 0;
+	}
+
+	return i;
+}
+
+int Research_I_LinkList(LinkListHead* Head, int i)
+{
+	if (!Head || Head->num == 0 || i <= 0 || i > Head->num) return 0;
+
+	LinkListNode* cur = Head->head;
+	while (--i)
+	{
+		cur = cur->next;
+	}
+
+	return cur->val;
+	
+}
+
+void Modify_X_LinkList(LinkListHead* Head, int x,int y)
+{
+	if (!Head || Head->num == 0) return;
+	
+	LinkListNode* cur = Head->head;
+	while (cur && cur->val != x)
+	{
+		cur = cur->next;
+	}
+	if (!cur)
+	{
+		cout << "没有值为：" << x << endl;
+	}
+
+	cur->val = y;
+
+	return;
+}
+
+void PrintList(LinkListHead* Head)
+{
+	LinkListNode* node = Head->head;
+	while (node)
+	{
+		cout << node->val << " ";
+		node = node->next;
+	}
+	cout << endl;
+	cout << Head->num << endl;
+}
+
+LinkListNode* FindMiddle(LinkListHead* Head)
+{
+	if (!Head || Head->num <= 2)
+	{
+		return nullptr;
+	}
+
+	LinkListNode* slow = Head->head;
+	LinkListNode* fast = Head->head;
+
+	while (fast && fast->next)
+	{
+		fast = fast->next->next;
+		slow = slow->next;
+	}
+
+	return slow;
+
+}
+
+bool DeleteLinkList(LinkListHead* Head)
+{
+	if (!Head || Head->num == 0) return true;
+
+	LinkListNode* cur = Head->head;
+	LinkListNode* nxt = cur->next;
+	while (cur)
+	{
+		delete cur;
+		cur = nxt;
+		if (nxt)
+		nxt = nxt->next;
+		Head->num--;
+	}
+	Head->head = nullptr;
+
+	if (!Head->num) return true;
+	
+	return false; 
+	
+}
