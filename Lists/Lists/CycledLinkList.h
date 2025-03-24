@@ -40,5 +40,11 @@ CycleLinkListHead* initCycledLinkList();
 //2.增：向循环单链表中第i(1≤i)个位置插入x - 用i来区分头插(1)和尾插(-1)
 void InsertCycledList(CycleLinkListHead* Head,int x,int i);
 
+//3.删：删除循环单链表中值为x的元素
+void Delete_X_CycledList(CycleLinkListHead* Head, int x);
+
+//删：删除循环单链表中第i个位置的元素
+void Delete_I_CycleList(CycleLinkListHead* Head, int i);
+
 //8.打印：将链表中所有元素打印输出
 void printCycleList(CycleLinkListHead* Head);

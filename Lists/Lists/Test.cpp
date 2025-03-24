@@ -59,7 +59,9 @@ void CycledListTest()
 	InsertCycledList(Head, 3, 1);
 	InsertCycledList(Head, 4, -1);
 	InsertCycledList(Head, 5, -1);
-	InsertCycledList(Head, 6, 3);
+	InsertCycledList(Head, 6, 3); // 3 2 6 4 5
+	Delete_X_CycledList(Head, 5);	// 3 2 6 4
+	Delete_I_CycleList(Head, 4);
 	printCycleList(Head);
 	
 }
@@ -68,6 +70,7 @@ int main()
 {
 
 	CycledListTest();
+
 
 	system("pause");
 
