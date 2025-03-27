@@ -13,8 +13,7 @@ using namespace std;
 			6.查：查找循环单链表中第i个位置的元素并返回元素值
 			7.改：将链表中值为x的第一个元素的值改为y
 			8.打印：将链表中所有元素打印输出
-			9.快慢指针，用O(N)的时间复杂度找到链表的中间节点
-			10.清楚链表所有元素
+			9.清楚链表所有元素
 
 */
 
@@ -43,8 +42,20 @@ void InsertCycledList(CycleLinkListHead* Head,int x,int i);
 //3.删：删除循环单链表中值为x的元素
 void Delete_X_CycledList(CycleLinkListHead* Head, int x);
 
-//删：删除循环单链表中第i个位置的元素
+//4、删：删除循环单链表中第i个位置的元素
 void Delete_I_CycleList(CycleLinkListHead* Head, int i);
+
+//5、查：查找循环单链表中值为x的元素并返回下标值
+int Research_X_CycledList(CycleLinkListHead* Head, int x);
+
+//6、查：查找循环单链表中第i个位置的元素并返回元素值
+int Research_I_CycledList(CycleLinkListHead* Head, int i);
+
+//7.改：将链表中值为x的第一个元素的值改为y
+void Modify_X_CycledList(CycleLinkListHead* Head, int x,int y);
 
 //8.打印：将链表中所有元素打印输出
 void printCycleList(CycleLinkListHead* Head);
+
+//9、清楚链表所有元素
+void DeleteCycledList(CycleLinkListHead* Head);

@@ -60,8 +60,9 @@ void CycledListTest()
 	InsertCycledList(Head, 4, -1);
 	InsertCycledList(Head, 5, -1);
 	InsertCycledList(Head, 6, 3); // 3 2 6 4 5
-	Delete_X_CycledList(Head, 5);	// 3 2 6 4
-	Delete_I_CycleList(Head, 4);
+	//Delete_X_CycledList(Head, 5);	// 3 2 6 4
+	//Delete_I_CycleList(Head, 4);
+	cout << Research_X_CycledList(Head, 5) << "  查找值的下标" << endl;
 	printCycleList(Head);
 	
 }

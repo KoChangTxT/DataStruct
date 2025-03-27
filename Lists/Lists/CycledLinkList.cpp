@@ -152,6 +152,80 @@ void Delete_I_CycleList(CycleLinkListHead* Head, int i)
 
 }
 
+int Research_X_CycledList(CycleLinkListHead* Head, int x)
+{
+	if (!Head || Head->num <= 0) return 0;
+	
+	CycleLinkListNode* cur = Head->head;
+	if (Head->head->val == x)
+	{
+		return 1;
+	}
+	else
+	{
+		cur = cur->next;
+	}
+
+	int i = 1;
+	while (cur->val != x && cur != Head->head)
+	{
+		cur = cur->next;
+		++i;
+	}
+
+	if (cur == Head->head)
+	{
+		return 0;
+	}
+	
+	return i + 1;
+
+}
+
+int Research_I_CycledList(CycleLinkListHead* Head, int i)
+{
+	if (!Head || Head->num <= 0 || i > Head->num + 1) return 0;
+
+	CycleLinkListNode* cur = Head->head;
+	while (--i)
+	{
+		cur = cur->next;
+	}
+
+	return cur->val;
+}
+
+void Modify_X_CycledList(CycleLinkListHead* Head, int x,int y)
+{
+	if (!Head || Head->num <= 0) return;
+
+	CycleLinkListNode* cur = Head->head;
+	if (cur->val == x)
+	{
+		cur->val = y;
+		cout << "修改成功" << endl;
+	}
+	else
+		cur = cur->next;
+
+	while (cur->val != x && cur != Head->head)
+	{
+		cur = cur->next;
+	}
+
+	if (cur != Head->head)
+	{
+		cur->val = y;
+		cout << "修改成功" << endl;
+	}
+	else
+	{
+		cout << "修改失败" << endl;
+	}
+
+	return;
+}
+
 void printCycleList(CycleLinkListHead* Head)
 {
 	if (!Head || Head->num == 0)
@@ -167,4 +241,31 @@ void printCycleList(CycleLinkListHead* Head)
 	cout <<cur->val<< endl;
 	cout << "尾指针指向的下一个的值为：" << cur->next->val << endl;
 	cout << "链表num：" << Head->num << endl;
+}
+
+void DeleteCycledList(CycleLinkListHead* Head)
+{
+	if (!Head || Head->num <= 0)
+		return;
+
+	CycleLinkListNode* cur = Head->head->next;
+	CycleLinkListNode* nxt = cur->next;
+	while (1)
+	{
+		if (cur == Head->head)
+		{
+			delete cur;
+			Head->num--;
+			Head->head = nullptr;
+			return;
+		}
+
+		delete cur;
+		cur = nxt;
+		nxt = nxt->next;
+		Head->num--;
+	}
+
+	cout << "清除完毕" << endl;
+	return;
 }
