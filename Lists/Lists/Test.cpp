@@ -67,13 +67,15 @@ void CycledListTest()
 	
 }
 
-int main()
-{
-
-	CycledListTest();
 
 
-	system("pause");
-
-	return 0;
-}
+//int main()
+//{
+//
+//	//CycledListTest();
+//
+//
+//	system("pause");
+//
+//	return 0;
+//}

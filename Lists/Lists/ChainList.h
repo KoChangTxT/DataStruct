@@ -6,10 +6,10 @@ using namespace std;
 		1.链表  规定数据类型int类型
 			1.线性表的初始化
 			2.增：向线性表中第i(1≤i)个位置插入x - 用i来区分头插(1)和尾插(-1)
-			3.删：删除线性表中值为x的元素
-			4.删：删除线性表中第i个位置的元素
-			5.查：查找线性表中值为x的元素并返回下标值
-			6.查：查找线性表中第i个位置的元素并返回元素值
+			3.删：删除链表中值为x的元素
+			4.删：删除链表中第i个位置的元素
+			5.查：查找链表中值为x的元素并返回下标值
+			6.查：查找链表中第i个位置的元素并返回元素值
 			7.改：将链表中值为x的第一个元素的值改为y
 			8.打印：将链表中所有元素打印输出
 			9.快慢指针，用O(N)的时间复杂度找到链表的中间节点
@@ -35,19 +35,19 @@ typedef struct			//维护一个头节点
 //1.链表初始化   - 所有的链表 - 所有的头节点
 LinkListHead* InitLinkList();
 
-//2.增：向线性表中第i(1≤i)个位置插入x - 用i来区分头插(1)和尾插(-1)
+//2.增：向链表表中第i(1≤i)个位置插入x - 用i来区分头插(1)和尾插(-1)
 void InsertLinkList(LinkListHead* Head, int x,int i);
 
-//3.删：删除线性表中值为x的元素
+//3.删：删除链表表中值为x的元素
 void Delete_X_LinkList(LinkListHead* Head, int x);
 
-//4.删：删除线性表中第i个位置的元素
+//4.删：删除链表表中第i个位置的元素
 void Delete_I_LinkList(LinkListHead* Head, int i);
 
-//5.查：查找线性表中值为x的元素并返回下标值
+//5.查：查找链表表中值为x的元素并返回下标值
 int Research_X_LinkList(LinkListHead* Head, int x);
 
-//6.查：查找线性表中第i个位置的元素并返回元素值
+//6.查：查找链表表中第i个位置的元素并返回元素值
 int Research_I_LinkList(LinkListHead* Head, int i);
 
 //7.改：将链表中值为x的第一个元素的值改为y
